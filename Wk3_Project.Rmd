@@ -1,0 +1,28 @@
+---
+title: "Week3_Project"
+author: "DM Feronti"
+date: "March 2, 2018"
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+library(datasets)
+```
+
+## Plot: Chick Weights
+
+```{r cars, echo = TRUE}
+data <- as.data.frame(ChickWeight)
+plot_ly(ChickWeight,
+        x = ~Chick,
+        y= ~weight,
+        type = "scatter",
+        mode = 'markers',
+        color = ~Diet
+        ,size = ~Time)
+```
